@@ -33,8 +33,14 @@ jobs:
       with:
         shellcommand: "asciidoctor sample_pandoc.adoc -a toc=left" 
     # Use the output from the documents step
-    - name: Save AsciiDoc step
-      uses: actions/upload-artifact@v1
-      with:
-        name: Output-document
-        path: ./sample_pandoc.html
+    - name: move deploy files
+      run: |
+        mkdir build/
+        mv sample_pandoc* build/
+        ls build
+    - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
