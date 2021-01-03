@@ -23,9 +23,9 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - name: Markdown To Asciidoc
-      uses: docker://pandoc/core:2.10
-        with:
-          args: sample.md --to asciidoctor -o sample_pandoc.adoc
+      uses: docker://pandoc/core:2.9
+      with:
+        args: sample.md --to asciidoctor -o sample_pandoc.adoc
     # Output command using asciidoctor-action
     - name: Build AsciiDoc step
       id: documents
