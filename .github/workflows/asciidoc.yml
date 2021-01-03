@@ -31,7 +31,7 @@ jobs:
       id: documents
       uses: Analog-inc/asciidoctor-action@master
       with:
-        shellcommand: "asciidoctor sample_pandoc.adoc" 
+        shellcommand: "asciidoctor sample_pandoc.adoc -a toc=left" 
     # Use the output from the documents step
     - name: Save AsciiDoc step
       uses: actions/upload-artifact@v1
