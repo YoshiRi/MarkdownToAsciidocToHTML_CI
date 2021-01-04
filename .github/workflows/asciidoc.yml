@@ -25,18 +25,18 @@ jobs:
     - name: Markdown To Asciidoc
       uses: docker://pandoc/core:2.9
       with:
-        args: sample.md --to asciidoctor -o sample_pandoc.adoc
+        args: sample.md --to asciidoctor -o sample.adoc
     # Output command using asciidoctor-action
     - name: Build AsciiDoc step
       id: documents
       uses: Analog-inc/asciidoctor-action@master
       with:
-        shellcommand: "asciidoctor sample_pandoc.adoc -a toc=left" 
+        shellcommand: "asciidoctor sample.adoc -a toc=left" 
     # Use the output from the documents step
     - name: move deploy files
       run: |
         mkdir build/
-        mv sample_pandoc* build/
+        mv sample* build/
         ls build
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
