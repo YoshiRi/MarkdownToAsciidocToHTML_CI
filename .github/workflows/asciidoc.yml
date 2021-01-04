@@ -31,7 +31,7 @@ jobs:
       id: documents
       uses: Analog-inc/asciidoctor-action@master
       with:
-        shellcommand: "asciidoctor sample.adoc -a toc=left" 
+        shellcommand: "asciidoctor sample.adoc -r asciidoctor-diagram -a allow-uri-read -a data-uri -a toc=left" 
     # Use the output from the documents step
     - name: move deploy files
       run: |
