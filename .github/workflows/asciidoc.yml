@@ -23,9 +23,9 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - name: Markdown To Asciidoc
-      uses: docker://pandoc/core:2.9
+      uses: docker://pandoc/core:2.11
       with:
-        args: sample.md --to asciidoctor -o sample.adoc
+        args: -f markdown+east_asian_line_breaks sample.md --to asciidoctor -o sample.adoc --wrap=preserve --verbose
     # Output command using asciidoctor-action
     - name: Build AsciiDoc step
       id: documents
