@@ -14,18 +14,15 @@ Markdown記法サンプル
 
 '''''
 
-ここは段落です。♪もーもたろさん もーもたーろさん
-おっこしーにつっけたーちーびまーるこー
+ここは段落です。♪もーもたろさん もーもたーろさん おっこしーにつっけたーちーびまーるこー
 
 ここは段落です。 +
 ↑半角スペース2個で強制改行しています。 +
 ♪もーもたろさん もーもたーろさん おっこしーにつっけたーちーんあーなごー
 
-* *強い強調（strong）です。* *これも強い強調です。* `+<strong>+`
-strongタグです。 `+</strong>+`
+* *強い強調（strong）です。* *これも強い強調です。* `+<strong>+` strongタグです。 `+</strong>+`
 * _強調（em）です。_ _これも強調です。_ 斜体の `+<em>+` タグになります。
-* *_強調斜体です。_* *_強調斜体です。_* `+<strong>+` ＋ `+<em>+`
-タグになります。
+* *_強調斜体です。_* *_強調斜体です。_* `+<strong>+` ＋ `+<em>+` タグになります。
 
 ____
 引用（Blockquote）です
@@ -153,7 +150,7 @@ body { display: none; } /* バッククォート囲みcss */
 
 === 画像
 
-image:http://mkb.salchu.net/image/salchu_image02.jpg[うきっ！,title="salchu_image02.jpg"]
+image::http://mkb.salchu.net/image/salchu_image02.jpg[うきっ！,title="salchu_image02.jpg"]
 
 === table
 
@@ -178,8 +175,9 @@ URLそのまま貼り付け http://wired.jp/
 
 === 段落中の改行
 
-ここは段落です。 ↑returnで改行しています。 ♪もーもたろさん
-もーもたーろさん おっこしーにつっけたーちー○○ー○○ー
+ここは段落です。
+↑returnで改行しています。
+♪もーもたろさん もーもたーろさん おっこしーにつっけたーちー○○ー○○ー
 
 === コードブロック
 
@@ -216,8 +214,7 @@ GitHub_Flavored_Markdown_test_test
 
 '''''
 
-from http://qiita.com/salchu/items/da81122ed50b35feda4d[Markdown記法
-表示確認用サンプル - Qiita]
+from http://qiita.com/salchu/items/da81122ed50b35feda4d[Markdown記法 表示確認用サンプル - Qiita]
 
 == おまけ
 
@@ -227,6 +224,4 @@ markdownでテキストリンク http://wired.jp/[WIRED.jp]
 
 <カッコ>でくくってリンク http://wired.jp/
 
-定義参照リンクです。SNSには https://twitter.com/[Twitter] や
-https://ja-jp.facebook.com/[Facebook] や
-https://plus.google.com/[Google+] などがあります。
+定義参照リンクです。SNSには https://twitter.com/[Twitter] や https://ja-jp.facebook.com/[Facebook] や https://plus.google.com/[Google+] などがあります。
