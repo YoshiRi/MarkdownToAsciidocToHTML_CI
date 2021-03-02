@@ -23,7 +23,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - name: Fix Title Level Issue
-      run: sed -ie `0,/# / s/# /= /` sample.md
+      run: sed -ie '0,/# / s/# /= /' sample.md
     - name: Markdown To Asciidoc
       uses: docker://pandoc/core:2.11
       with:
