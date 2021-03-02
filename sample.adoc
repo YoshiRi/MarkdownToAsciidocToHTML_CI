@@ -1,4 +1,19 @@
-Markdown記法サンプル
+:lang: ja
+:doctype: book
+:toc: left
+:toc-title: 目次
+:sectnums:
+:sectnumlevels: 4
+:sectlinks:
+:imagesdir: ./_images
+:icons: font
+:source-highlighter: coderay
+:example-caption: 例
+:table-caption: 表
+:figure-caption: 図
+:docname: = Markdown_to_Asciidoctor_template
+:author: ossyaritoori
+:revnumber: 0.1
 
 = 見出し1（h1）
 
